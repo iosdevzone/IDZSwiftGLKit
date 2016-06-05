@@ -24,7 +24,7 @@ class IDZSwiftGLKitTests: XCTestCase {
     
     func testMultiply() {
         
-        let I = GLKMatrix4Identity
+        let I = GLKMatrix4.eye
         let X = GLKMatrix4(m: (1.0, 2.0, 3.0, 4.0,
                               5.0, 6.0, 7.0, 8.0,
                               9.0, 8.0, 7.0, 6.0,

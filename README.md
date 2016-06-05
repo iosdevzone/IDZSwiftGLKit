@@ -1,7 +1,22 @@
 # IDZSwiftGLKit
 Swift extensions to Apple's GLKit
 
-## Shorthand
+## Arithmetic Operators 
+
+Provides matrix addition, subtraction and multiplication operators.
+
+### multiplication
+
+Before:
+```swift 
+let mvp = GLKMatrix4Multiply(projection, GLKMatrix4Multiply(view, model))
+```
+
+After:
+let mvp = projection * view * model
+```
+
+## Constants
 
 ### eye
 
@@ -16,9 +31,7 @@ Shorthand for `GLKMatrix()`
 
 
 
-## Arithmetic Operators 
 
-Provides matrix addition, subtraction and multiplication operators.
 
 ### And...
 Provides `==` but grudgingly so.
