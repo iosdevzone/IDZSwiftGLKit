@@ -45,6 +45,10 @@ public extension GLKMatrix4 {
     var transpose: GLKMatrix4 {
         return GLKMatrix4Transpose(self)
     }
+    
+    var debugDescription : String {
+        return self.array.map { String($0) }.joinWithSeparator(", ")
+    }
 }
 
 /**
