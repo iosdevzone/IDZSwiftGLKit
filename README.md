@@ -3,7 +3,7 @@ Swift extensions to Apple's GLKit
 
 ## Arithmetic Operators 
 
-Provides matrix addition, subtraction and multiplication operators.
+Provides matrix multiplication, addition, and  subtraction operators.
 
 ### multiplication
 
@@ -11,7 +11,7 @@ Before:
 ```swift 
 let mvp = GLKMatrix4Multiply(projection, GLKMatrix4Multiply(view, model))
 ```
-swift
+
 After:
 ```
 let mvp = projection * view * model
@@ -21,11 +21,20 @@ let mvp = projection * view * model
 
 ### eye
 
-Shorthand for `GLKMatrixIdentity`
+Shorthand for `GLKMatrix4Identity`
+
+Before:
+```swift
+let I = GLKMatrix4Identity
+```
+After:
+```swift
+let I = GLKMatrix4.eye
+```
 
 ### zero
 
-Shorthand for `GLKMatrix()`
+Shorthand for `GLKMatrix4()`
 
 
 ## Adapters
