@@ -11,8 +11,9 @@ Before:
 ```swift 
 let mvp = GLKMatrix4Multiply(projection, GLKMatrix4Multiply(view, model))
 ```
-
+swift
 After:
+```
 let mvp = projection * view * model
 ```
 
